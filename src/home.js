@@ -1,14 +1,10 @@
+import newsjson from "./json/news.json";
+import { Link } from 'react-router-dom';
 function Home() {
     return (
         <div>
             <div class="grid-container">
-                <div class="nav">
-                    <div class="nav_1_Home"><img src="../assets/img_Landing_icon-10-10.png" alt="" /></div>
-                    <div class="nav_2_About">About</div>
-                    <div class="nav_3_News">News</div>
-                    <div class="nav_4_Members">Member</div>
-                    <div class="nav_5_signin"><button class="signoutbtn">Signout</button></div>
-                </div>
+
 
                 <div class="header">
                     <div class="header_1_title">
@@ -30,21 +26,36 @@ function Home() {
                         <div class="small_text">嘉義港坪風雨球場<br />與銘傳商設的拉鋸戰</div>
                         <span class="readmore">read more</span>
                     </div>
+
                     <div class="main_3_img"></div>
+
                     <div class="main_3_art">
-                        <div class="big_text">新世代的交替</div>
-                        <div class="small_text">非人類教練表示:我想吃蜂蜜</div>
+                        <Link to={`/news/${newsjson[0].id}`}>
+                            <div class="big_text">{newsjson[0].title}</div>
+                            <div class="small_text">{newsjson[0].header}</div>
+                        </Link>
                     </div>
+
+
                     <div class="main_4_img"></div>
+
                     <div class="main_4_art">
-                        <div class="big_text">2019系際盃</div>
-                        <div class="small_text">決戰心諮!激戰3回合</div>
+                        <Link to={`/news/${newsjson[1].id}`}>
+                            <div class="big_text">{newsjson[1].title}</div>
+                            <div class="small_text">{newsjson[1].header}</div>
+                        </Link>
                     </div>
+
+
                     <div class="main_5_img"></div>
+
                     <div class="main_5_art">
-                        <div class="big_text">開心吃隊聚</div>
-                        <div class="small_text">整場笑嗨嗨 與大四學姊的歡樂送舊</div>
+                        <Link to={`/news/${newsjson[2].id}`}>
+                            <div class="big_text">{newsjson[2].title}</div>
+                            <div class="small_text"> {newsjson[2].header}</div>
+                        </Link>
                     </div>
+
                 </div>
                 <div class="member">
                     <div class="member_bgcolor"></div>

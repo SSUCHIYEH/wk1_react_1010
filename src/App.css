@@ -39,17 +39,40 @@
 
 .nav{
   z-index: 20;
-  width: 100vw;
-  height:15vh;
+  width: 100%;
+  height:10vh;
   background-color: rgba(102, 204, 177);
-  grid-area: nav;
   position: fixed;
   color: #484041;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ; 
-  grid-template-rows:15vh;
+  display: flex;
+  align-items: center;
   box-shadow:3px 3px 20px #48404163;
+  list-style: none;
+
 }
+
+.nav li:nth-child(2){
+  margin-left: 20%;
+}
+
+.nav-item{
+  margin-right: 100px;
+}
+.nav .nav-item:nth-child(4){
+  margin-right: 36%;
+}
+.nav .nav-item:nth-last-child(1){
+  border: 1px solid #484041;
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+
+
+.nav .nav-item:nth-child(1){
+  margin-right: 0;
+}
+
+
 
 .nav:hover{
   background-color: rgba(102, 204, 177, 0.95);
@@ -390,3 +413,191 @@ a:hover{
   grid-row: 2 /end;
   background-color: #484041;
 }
+
+
+/* ----news------ */
+
+/* .footer {
+  padding-bottom: 1vh;
+  align-items:flex-end;
+  justify-content:center;;
+  display: flex;
+  color:#FEC0AA;
+  font-size: 1vw;
+  height:10vh;
+  background-color: #484041;
+  grid-area: footer;
+}
+*{
+  margin:0;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "nav"
+                      "header"
+                       "main "
+                       "member "
+                       "footer ";
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+.header{
+  grid-area: header;
+  background-repeat: no-repeat;
+  background-size:100% auto;
+  background-image: url('./assets/img_News_header.jpg');
+  background-position: center;
+  height:100vh;
+  display:grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  grid-template-rows: 0.8fr 0.2fr;
+  grid-template-areas:". ."
+                      ". header_title";
+}
+.header_title{
+  grid-area: header_title;
+  font-family: "serif";
+  font-size: 4vw;
+  font-weight: 5px;
+  color:#fff;
+}
+.main{
+  grid-area: main;
+  display: grid;
+  grid-template-columns:20vh 30vh 1fr 20vh ;
+  grid-template-rows:10vh 30vh 30vh 30vh 10vh ;
+}
+.news_img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  margin:10%;
+}
+.news_intro{
+  font-family: '華康中圓體';
+  color:#484041;
+  margin:3%;
+  line-height: 1.2;
+}
+.news_img_1{
+  grid-column: 2/3;
+  grid-row:2/3;
+  background-image: url('./assets/img_Landing_new2.jpg');
+
+}
+.news_img_2{
+  grid-column: 2/3;
+  grid-row:3/4;
+  background-image: url('./assets/img_News_new2.jpg');
+}
+.news_img_3{
+  grid-column: 2/3;
+  grid-row:4/5;
+  background-image: url('./assets/img_News_new3.jpg');
+}
+.news_intro_1{
+  grid-column: 3/4;
+  grid-row:2/3;
+}
+.news_intro_2{
+  grid-column: 3/4;
+  grid-row:3/4;
+}
+.news_intro_3{
+  grid-column: 3/4;
+  grid-row:4/5;
+}
+.news_line_1{
+  grid-column: 2/4;
+  grid-row:2/3;
+  border-bottom: 2px solid #66CCB0;
+}
+.news_line_2{
+  grid-column: 2/4;
+  grid-row:3/4;
+  border-bottom: 2px solid #66CCB0;
+}
+.news_font_big{
+    font-size: 2em;
+    margin-bottom: 2vh;
+}
+.news_font_mid{
+  font-size: 1.5em;
+}
+.linkarticle{
+  text-decoration: none;
+  color: #000;
+}
+.linkarticle:hover{
+  color: #66ccb0;
+} */
+
+
+
+/*--------article------------*/
+
+.mainarea{
+  margin-top:15vh ;
+  margin-left:0;
+  margin-right: 0; 
+}
+.start{
+  margin-top: 5vh;
+}
+  .topicbody{
+      padding-left: 5vw;
+  }
+  .contentbody{
+        
+      padding: 1vh 5vw;
+      border-right:#66ccb0 5px solid;
+      border-bottom:#66ccb0 5px solid;
+  }
+  .maintopic{
+      font-size: 3.5vw;
+      letter-spacing: 5px;
+       font-family: 'cwTeXYen', sans-serif;
+  }
+  .time{
+    font-family: 'cwTeXYen', sans-serif;
+  }
+  .bearimg{
+      
+      background-size: 100%;
+      height: 60vh;
+      background-repeat: no-repeat;
+      position: relative;
+  }
+  .bearimg img{
+    width: 100%;
+    height: 100%;
+  }
+  .smalltopic{
+      font-family: 'cwTeXYen', sans-serif;
+      margin: 0;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      padding: 2vh 2vw;
+      font-size: 2vw;
+      letter-spacing: 3px;
+      background-color: rgba(255,255,255,0.8);
+  }
+  
+  .first{
+      font-size: 3vw;
+  }
+  .text{
+      font-family: 'cwTeXYen', sans-serif;
+      line-height: 6vh;
+      font-size: 1.8vw;
+      padding-top: 3vh;
+      letter-spacing: 3px;
+  }
+  .line{
+      height: 3vh;
+      border-bottom: #66ccb0 5px solid;
+  }
